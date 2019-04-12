@@ -67,19 +67,13 @@ optional arguments:
   -a                    показать все содержимое БД
 
 
-$ python parse_dhcp_snooping.py add -h
-usage: parse_dhcp_snooping.py add [-h] [--db DB_FILE] [-s]
-                                  filename [filename ...]
-
-positional arguments:
-  filename      файл(ы), которые надо добавить
+$ python parse_dhcp_snooping.py create_db -h
+usage: parse_dhcp_snooping.py create_db [-h] [-n NAME] [-s SCHEMA]
 
 optional arguments:
-  -h, --help    show this help message and exit
-  --db DB_FILE  имя БД
-  -s            если флаг установлен, добавлять данные коммутаторов, иначе -
-                DHCP записи
-
+  -h, --help  show this help message and exit
+  -n NAME     имя БД
+  -s SCHEMA   схема БД
 
 $ python parse_dhcp_snooping.py add -h
 usage: parse_dhcp_snooping.py add [-h] [--db DB_FILE] [-s]
@@ -93,20 +87,6 @@ optional arguments:
   --db DB_FILE  имя БД
   -s            если флаг установлен, добавлять данные коммутаторов, иначе
                 добавлять DHCP записи
-
-
-$ python parse_dhcp_snooping.py get -h
-usage: parse_dhcp_snooping.py get [-h] [--db DB_FILE]
-                                  [-k {mac,ip,vlan,interface,switch}]
-                                  [-v VALUE] [-a]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --db DB_FILE          имя БД
-  -k {mac,ip,vlan,interface,switch}
-                        параметр для поиска записей
-  -v VALUE              значение параметра
-  -a                    показать все содержимое БД
 
 
 $ python parse_dhcp_snooping.py create_db
